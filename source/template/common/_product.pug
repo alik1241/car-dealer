@@ -1,0 +1,20 @@
+mixin product(car)
+    .product__wrap
+        .product__img(style=`background: url(../img/${car.img})`)
+        .product__info
+            .title=`${car.title}`
+            .desc
+                .desc-item
+                    i.far.fa-calendar-alt
+                    span=`${car.params.year}`
+                .desc-item
+                    i.fa.fa-cogs
+                    span=`${car.params.steps}`
+                .desc-item
+                    i.car-seat
+                    span=`${car.params.places}`
+        .product__price
+            //i.fas.fa-pound-sign 1000
+            //i.fas.fa-ruble-sign 1000
+            i.fas.fa-dollar-sign 1000
+        .btn.btn__red add to cart

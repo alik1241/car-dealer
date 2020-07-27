@@ -1,0 +1,75 @@
+.product {
+	&__wrap {
+		width: 350px;
+		height: 530px;
+		border: 1px solid @gray;
+		padding: 2*@sp @sp;
+		margin: 0 auto;
+
+		.btn {
+			margin: 0 auto;
+		}
+	}
+
+	&__img {
+		background-position: center center !important;
+		background-size: cover !important;
+		height: 190px !important;
+		margin-bottom: @sp;
+	}
+
+	&__info {
+		.title {
+			text-transform: uppercase;
+			font-family: 'Oswald-Medium';
+			font-size: 24px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.desc {
+			color: darken(@gray, 10%);
+			text-align: center;
+			margin-bottom: 20px;
+
+			span {
+				font-family: 'Gilroy-Light';
+				font-size: 18px;
+			}
+
+			&-item {
+				display: inline-block;
+				margin-right: 2*@sp;
+
+				i {
+					font-size: 24px;
+					margin-right: 5px;
+
+					&.car-seat {
+						background: url("../img/seat-belt.svg");
+						width: 25px;
+						height: 23px;
+						background-position: center;
+						display: inline-block;
+						position: relative;
+						top: 2px;
+						opacity: 0.4;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&__price {
+		font-size: 30px;
+		font-family: 'Oswald-Medium';
+		color: @red;
+		text-align: center;
+		margin-bottom: 20px;
+		user-select: none;
+	}
+}

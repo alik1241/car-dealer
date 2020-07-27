@@ -1,0 +1,73 @@
+.footer {
+	background: @gray-dark;
+	height: 200px;
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 2*@sp 0;
+		color: #fff;
+		height: 200px;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	&__logo, &__desc, &__socials, &__menu {
+		float: left;
+		font-family: 'Gilroy-Light';
+	}
+
+	&__logo {
+		width: 200px;
+
+		.title {
+			font-family: 'Oswald-Bold';
+			font-size: 35px;
+			color: @red;
+			text-transform: uppercase;
+			line-height: 1;
+		}
+
+		.subtitle {
+			font-size: 16px;
+			line-height: 2;
+		}
+	}
+
+	&__desc {
+		line-height: 1.5;
+		width: 250px;
+	}
+
+	&__menu, &__socials {
+		li {
+			margin-bottom: @sp;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			i {
+				margin-right: 5px;
+			}
+		}
+
+		a {
+			color: #fff;
+			transition: all .2s;
+
+			&:hover {
+				color: @red;
+			}
+		}
+	}
+
+	&__copyright {
+		background: @black;
+		color: #fff;
+		text-align: center;
+		padding: 2*@sp 0;
+		font-family: 'Gilroy-Light';
+	}
+}

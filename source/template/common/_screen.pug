@@ -1,0 +1,170 @@
+-
+    var list = [
+        {
+            img: 'car-photo-acura.jpg',
+            title: 'Acura TLX',
+            params:
+            {
+                year: '2016',
+                steps: '9 AT',
+                places: 4
+            }
+        },
+        {
+            img: 'car-photo-merc.jpg',
+            title: 'Mercedes-AMG GT R',
+            params:
+            {
+                year: '2017',
+                steps: '7 AT',
+                places: 2
+            }
+        },
+        {
+            img: 'car-photo-nissan.jpg',
+            title: 'Nissan 370Z',
+            params:
+            {
+                year: '2008',
+                steps: '5 MT',
+                places: 2
+            }
+        },
+        {
+            img: 'car-photo-audi.jpg',
+            title: 'Audi A3',
+            params:
+            {
+                year: '2011',
+                steps: '6 AT',
+                places: 4
+            }
+        },
+        {
+            img: 'car-photo-merc-2.jpg',
+            title: 'Mercedes-Benz SLK class',
+            params:
+            {
+                year: '2017',
+                steps: '6 AT',
+                places: 2
+            }
+        },
+        {
+            img: 'car-photo-mustang.jpg',
+            title: 'ford shelby mustang gt500',
+            params:
+            {
+                year: '2009',
+                steps: '6 MT',
+                places: 2
+            }
+        },
+        {
+            img: 'car-photo-rover.jpg',
+            title: 'Range Rover Evoque',
+            params:
+            {
+                year: '2013',
+                steps: 6,
+                places: 4
+            }
+        }
+    ];
+
+include _product
+
+.btn__back-top(id="back-top")
+    i.fas.fa-angle-up
+.screen__first
+    .content__wrap
+        .screen__container
+            .screen__title.screen__title_big You can more than
+            .screen__title.screen__title_red.screen__title_big you think
+            .screen__text
+                | What if we say "you can be anybody"?
+                | Regardless of your income level and current status - you can easily rise to any level.
+                | With us, you can be anyone you want right now!
+                | Join us
+            a.btn.btn__red.btn__big(href="#choose") Join
+            a.btn.btn__red.btn__big(href="#choose" id="m-join-btn") Join
+
+.screen__second(id="choose")
+    .content__wrap
+        .screen__container
+            .screen__title.screen__title_small Super Cars
+            .screen__title.screen__title_sub.screen__title_red check out our better offers
+            .screen__product-list
+                .owl-carousel
+                    each car in list
+                        +product(car)
+
+.screen__three(id="about")
+    .content__wrap
+        .screen__container
+            .screen__title.screen__title_small about us
+            .screen__title.screen__title_sub.screen__title_red what we can tell
+            .screen__text
+                | Do you want to ride in an expensive sports car?
+                | Or your business class auto in the service on repair, but today meeting with partners and you can't disgrace?
+                | Maybe you and your family on vacation and need a comfortable car? Then you're on the right way! We provide car rental services at low prices!
+                | All cars are regularly inspected and cleaned. Interesting? Check out our best offers below!
+            .screen__image
+            .screen__cols
+                .item
+                    .title you can find
+                    .sub-title any brands
+                    .text We can offer to you almost any brand of cars with a sufficient count of class
+                .item
+                    .title you can have
+                    .sub-title free support
+                    .text Our specialists work 24/7, so you can ask any questions at any time, as well as call for help in the way
+                .item
+                    .title we are
+                    .sub-title official dealer
+                    .text For most brands, we are an official dealer, which means we can offer the best prices and quality service!
+                .item
+                    .title our services are
+                    .sub-title affordable
+                    .text We can offer cars for every taste and purse. But regardless of the price, you will always feel above competitors
+
+.screen__contacts(id="contacts")
+    .content__wrap
+        .screen__container
+            .screen__title.screen__title_small our contacts
+            .screen__title.screen__title_sub.screen__title_red how you can contact us
+            .contacts__wrap
+                .contacts__form
+                    .title Leave your message
+                    form
+                        .contacts__form-name
+                            input.input(placeholder="Name")
+                        .contacts__form-phone
+                            input.input(placeholder="Phone")
+                        textarea.textarea(placeholder="Comment")
+                        .contacts__btn
+                            button.btn.btn__red send
+                .contacts__other
+                    .item
+                        .title
+                            i.fas.fa-map-marker-alt
+                            span address
+                        .text 220E Front St. Burlington NC 215
+
+                    .item
+                        .title
+                            i.fas.fa-phone.fa-flip-horizontal
+                            span phone
+                        a.text(href="tel:(007) 123 456 7890") (007) 123 456 7890
+
+                    .item
+                        .title
+                            i.fas.fa-envelope
+                            span email
+                        .text support@website.com
+
+                    .item
+                        .title
+                            i.fab.fa-skype
+                            span skype
+                        a.text(href="skype:car.rental?call") car.rental
