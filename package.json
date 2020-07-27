@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "author": "a.kalin",
   "license": "ISC",
-  "homepage": "https://alik1241.github.io/car-dealer",
+  "homepage": "https://alik1241.github.io/car-dealer/",
   "scripts": {
     "postinstall": "bower install",
     "predeploy": "gulp",
-    "deploy": "gh-pages -d gulp"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
