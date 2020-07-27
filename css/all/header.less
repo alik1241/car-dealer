@@ -1,0 +1,136 @@
+.header {
+	background: #fff;
+	height: 120px;
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 2px 7px -3px @shadow;
+	z-index: 5;
+
+	&__wrap {
+		max-width: @content-width;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: inline-block;
+
+		&-title {
+			color: @red;
+			font-size: 36px;
+			font-family: "Oswald-Bold";
+			text-transform: uppercase;
+		}
+
+		&-subtitle {
+			color: @black;
+			font-size: 16px;
+			font-family: "Gilroy-Light";
+		}
+	}
+
+	&__rightblock {
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu {
+		display: block;
+		margin-right: 70px;
+		position: relative;
+
+		i {
+			display: none;
+		}
+
+		&-box {
+			display: none;
+			background: #fff;
+			border: 1px solid @gray;
+			border-top: 0;
+			padding: 15px;
+			position: absolute;
+			right: -2*@msp;
+			top: 30px;
+			width: 100vw;
+			text-align: center;
+			box-shadow: 0 5px 7px -3px @shadow;
+			z-index: 1;
+
+			.btn-frame {
+				content: '';
+				position: absolute;
+				border: 1px solid @gray;
+				border-bottom: 0;
+				width: 54px;
+				height: 40px;
+				top: -40px;
+				right: -1px;
+				cursor: pointer;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				border-bottom: 1px solid @gray;
+				top: 0;
+				width: calc(~'100% - 52px');
+				left: 0;
+			}
+		}
+
+		.menu, .mobile-menu {
+			li {
+				float: left;
+				margin-right: 50px;
+				text-transform: uppercase;
+
+				a {
+					text-decoration: none;
+					color: @gray;
+					font-size: 18px;
+					font-family: "Oswald-Medium";
+					transition: all 0.2s;
+
+					&:hover {
+						color: @red;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.mobile-menu {
+			li {
+				float: unset;
+				margin: 0;
+				margin-bottom: 25px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__phone {
+		color: @black;
+		font-size: 18px;
+		font-family: "Oswald-Medium";
+
+		&_adaptive {
+			display: none;
+		}
+
+		i {
+			margin-right: 5px;
+		}
+	}
+}
