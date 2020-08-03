@@ -1,10 +1,11 @@
-// задача - копирование файлов css из папки исходников в итоговую папку
-
 'use strict';
 
 module.exports = function() {
   $.gulp.task('copy:css', function() {
-    return $.gulp.src('./source/style/**/*.*', { since: $.gulp.lastRun('copy:css') })
+    // для карусели берем и картинки тоже
+    return $.gulp.src(['./source/style/**/*.css', './source/style/**/*.png', './source/style/**/*.gif'], {
+      since: $.gulp.lastRun('copy:css')
+    })
       .pipe($.gulp.dest($.config.root + '/css'));
   });
 };
